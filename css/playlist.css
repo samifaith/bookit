@@ -1,0 +1,43 @@
+* {
+  box-sizing: border-box;
+}
+
+header {
+  display: flex;
+  border: 1px solid black;
+  height: 10vh;
+}
+.hero {
+  height: 90vh;
+}
+.mainSec {
+  display: flex;
+  /* flex-flow: column; */
+  border: 1px solid black;
+  height: 30vh;
+}
+
+.circleDiv {
+  width: 33.333%;
+  border: 1px solid pink;
+}
+
+.topicDiv {
+  width: 33.333%;
+  border: 1px solid red;
+}
+
+
+.recommendDiv {
+  display: flex;
+  border: 1px solid blue;
+  width: 33.333%;
+  justify-content: space-evenly;
+}
+
+.recommend {
+  width: 15vw;
+  border: 1px solid green;
+  height: 15vw;
+  align-self: center;
+}
