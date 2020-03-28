@@ -1,6 +1,6 @@
 # 📚 BookIt!
 
-** Demo Day Project **
+**Demo Day Project**
 I built an application called BookIt which gives readers just what they need for a personalized reading experience. Have you ever finished reading a really great book and didn’t know what to choose next? Or did you ever want to explore a new genre but didn’t know where to start? BookIt knows your preferences based on your social interactions and past reading options that then provides you with options you may have never considered.
 
 
@@ -8,8 +8,9 @@ I built an application called BookIt which gives readers just what they need for
 ![Image of BookIt!](signup.png)
 ![Image of BookIt!](interests.png)
 ![Image of BookIt!](profile.png)
+
+** Below dashboard to include panel with up-to-date info about your current reads**
 ![Image of BookIt!](dashboard.png)
-Dashboard to include panel with up-to-date info about your current reads
 
 **Pages in Order:**
 1. index.html
