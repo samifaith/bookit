@@ -1,0 +1,104 @@
+* {
+  box-sizing: border-box;
+}
+body {
+  font-size: 10px;
+}
+
+header {
+  display: flex;
+  /* border: 1px solid black; */
+  height: 10vh;
+  color: rgb(67, 47, 222);
+  border-bottom: 1px solid rgb(181,176,255, .15);
+}
+#logo {
+  display: flex;
+  flex: 1;
+}
+img{
+  max-width: 45%;
+}
+#dropdown {
+  display: flex;
+  flex: 3;
+  justify-content: space-around;
+  align-items: center;
+  font-size: 2rem;
+  font-family: "Playfair Display";
+}
+
+.hero {
+  width: 100%;
+  /* border: 1px solid red; */
+}
+.mainSec {
+  display: flex;
+  /* border: 1px solid black; */
+  /* height: 33.333%; */
+}
+
+.circleDiv {
+  display: flex;
+  justify-content: space-evenly;
+  width: 33.333%;
+  /* border: 1px solid pink; */
+}
+.circle {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.5rem;
+  font-family: "Lato";
+  color: rgb(67, 47, 222);
+  width: 14vw;
+  height: 25vh;
+  border: 8px solid rgb(67, 47, 222);
+  border-radius: 200px;
+  align-self: center;
+}
+
+
+#genre3 .circle {
+  border: 8px solid white;
+  color: white;
+}
+.topicDiv {
+  display: flex;
+  justify-content: space-evenly;
+  width: 33.333%;
+  /* border: 1px solid red; */
+}
+.topic {
+  width: 20vw;
+  height: 25vh;
+  /* border: 1px solid orange; */
+  align-self: center;
+  color: rgb(67,47,222);
+  font-family: "Lato";
+  font-size: 1rem;
+}
+.recommendDiv {
+  display: flex;
+  /* border: 1px solid blue; */
+  width: 33.333%;
+  height: 30vh;
+  justify-content: space-evenly;
+}
+.recommend {
+  width: 15vw;
+  /* border: 1px solid green; */
+  height: 25vh;
+  align-self: center;
+  background: rgb(181,176,255, .67);
+}
+#genre2 {
+  background: rgb(181, 176, 255, .43);
+}
+#genre3{
+  background: rgb(67, 47, 222);
+  color: white;
+}
+#genre3 .topic, #genre3 .circle {
+  color: white;
+}
