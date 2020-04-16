@@ -1,0 +1,54 @@
+<!doctype html>
+  <html>
+    <head>
+      <meta charset="utf-8">
+      <meta name="description" content="Your description goes here">
+      <meta name="keywords" content="playlist, books, curated">
+      <title>BookIt! Sign Up</title>
+      <link rel="stylesheet" href="css/normalize.css">
+  		<link rel="stylesheet" href="signup.css">
+  		<link href="https://fonts.googleapis.com/css?family=Lato|Playfair+Display|Playfair+Display+SC&display=swap" rel="stylesheet">
+  		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css">
+    </head>
+  <body>
+
+  <!-- SIGNUP FORM -->
+  <% if (message.length > 0) { %>
+      <div class="alert alert-danger"><%= message %></div>
+  <% } %>
+
+  <section id="leftPanel">
+    <h1><img src="images/booksPurple.png" alt="BookIt! Logo"></h1>
+    <p><span>Oh!</span></p>
+    <p><strong>The Places You'll Go</strong></p>
+    <img id="audioGirl" src="images/audiogirl.png" alt="Audio Girl">
+  </section>
+  <section id="rightPanel">
+    <div class="container">
+      <header>
+        <ol>
+          <li id="accountStep"><strong>ACCOUNT</strong></li>
+          <li><img src="images/purpleplane.png" alt="planes"></li>
+          <li id="interestStep">INTERESTS</li>
+        </ol>
+      </header>
+      <p>Create an account to discover your next great read.</p>
+      <form action="/signup" method="post">
+        <label for="firstName">First Name</label>
+        <input type="text" id="firstName" name="firstName" value="">
+        <label for="lastName">Last Name</label>
+        <input type="text" id="lastName" name="lastName" value="">
+        <label for="email">Email</label>
+        <input type="text" id="email" name="email" value="">
+        <label for="password">Password</label>
+        <input type="password" id="password" name="password" value="">
+        <p id="connect">Connect your social media accounts to receive a curated reading experience.</p>
+        <button class="socialButtons" type="button"><i class="fab fa-goodreads-g"></i>CONNECT YOUR GOODREADS ACCOUNT</button>
+        <button type="submit">NEXT</button>
+      </form>
+    <p>Already have an account? <a href="/login">Login</a></p>
+    </div>
+  </section>
+
+  </body>
+</html>

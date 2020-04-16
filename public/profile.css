@@ -1,0 +1,118 @@
+/******************************************
+/* BASE STYLES
+/*******************************************/
+
+* {
+  box-sizing: border-box;
+}
+body {
+  font-size: 10px;
+}
+
+/******************************************
+/* LAYOUT
+/*******************************************/
+
+/******************************************
+/* HEADER
+/*******************************************/
+header {
+  display: flex;
+  /* border: 1px solid black; */
+  /* height: 10vh; */
+  color: rgb(67, 47, 222);
+  border-bottom: 1px solid rgb(181,176,255, .15);
+}
+img{
+  max-width: 40%;
+}
+#logo {
+  display: flex;
+  flex: 1;
+}
+
+#dropdown {
+  display: flex;
+  flex: 3;
+  justify-content: space-around;
+  align-items: center;
+  font-size: 2rem;
+  font-family: "Playfair Display";
+}
+
+/******************************************
+/* HERO
+/*******************************************/
+.hero {
+  width: 100%;
+}
+.mainSec {
+  display: flex;
+}
+
+.circleDiv {
+  display: flex;
+  justify-content: space-evenly;
+  width: 33.333%;
+}
+.circle {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.5rem;
+  font-family: "Lato";
+  color: rgb(67, 47, 222);
+  width: 34%;
+  height: 60%;
+  border: 17px solid rgb(67, 47, 222);
+  border-radius: 100%;
+  align-self: center;
+}
+
+
+#genre3 .circle {
+  border: 17px solid white;
+  color: white;
+}
+.topicDiv {
+  display: flex;
+  justify-content: space-evenly;
+  width: 33.333%;
+  /* border: 1px solid red; */
+}
+.topic {
+  width: 20vw;
+  height: 25vh;
+  /* border: 1px solid orange; */
+  align-self: center;
+  color: rgb(67,47,222);
+  font-family: "Lato";
+  font-size: 1rem;
+}
+.recommendDiv {
+  display: flex;
+  /* border: 1px solid blue; */
+  width: 33.333%;
+  height: 30vh;
+  justify-content: space-evenly;
+}
+.recommend {
+  width: 15vw;
+  /* border: 1px solid green; */
+  height: 25vh;
+  align-self: center;
+  background: rgb(181,176,255, .67);
+  box-shadow: 1px 1px 16px -2px rgba(0, 0, 0, 0.3);
+}
+
+
+#genre2 {
+  background: rgb(181, 176, 255, .43);
+}
+#genre3{
+  background: rgb(67, 47, 222);
+  color: white;
+}
+#genre3 .topic, #genre3 .circle {
+  color: white;
+}

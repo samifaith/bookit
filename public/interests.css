@@ -1,0 +1,197 @@
+/******************************************
+/* SETUP
+/*******************************************/
+
+/* Box Model Hack */
+* {
+     -moz-box-sizing: border-box; /* Firexfox */
+     -webkit-box-sizing: border-box; /* Safari/Chrome/iOS/Android */
+     box-sizing: border-box; /* IE */
+}
+
+/* Clear fix hack */
+.clearfix:after {
+     content: ".";
+     display: block;
+     clear: both;
+     visibility: hidden;
+     line-height: 0;
+     height: 0;
+}
+
+.clear {
+	clear: both;
+}
+
+.alignright {
+	float: right;
+	padding: 0 0 10px 10px; /* note the padding around a right floated image */
+}
+
+.alignleft {
+	float: left;
+	padding: 0 10px 10px 0; /* note the padding around a left floated image */
+}
+
+/******************************************
+/* BASE STYLES
+/*******************************************/
+
+body {
+   font-size: 10px;
+   display: flex;
+   width: 100%;
+   height: 100vh;
+   margin: 0;
+   font-family: "Lato";
+}
+
+/******************************************
+/* LAYOUT
+/*******************************************/
+
+/******************************************
+/* LEFT PANEL
+/*******************************************/
+
+h1 img{
+  max-width: 40%;
+}
+#leftPanel {
+  display: flex;
+  flex-flow: column;
+  flex: 1;
+  background: rgba(65, 0, 244, 0.1);
+  padding: 32px 24px 24px 24px;
+  height: 100vh;
+}
+
+#leftPanel span{
+  font-size: 3.5rem;
+  font-family: "Playfair Display";
+  color: rgba(65, 0, 244);
+  line-height: 100px;
+}
+#leftPanel p {
+  font-size: 2.5rem;
+  font-family: "Lato";
+  color: rgb(0,0,0);
+  font-weight: 500;
+  letter-spacing: 2px;
+  margin: 0;
+}
+#audioGirl {
+  margin-top: 100px;
+  width: 50%;
+}
+
+/******************************************
+/* RIGHT PANEL
+/*******************************************/
+#rightPanel {
+  display: flex;
+  flex-flow: column;
+  flex: 3;
+}
+
+#rightPanel .container {
+  width: 80%;
+  margin: 0 auto;
+}
+
+ol{
+  display: flex;
+  list-style: none;
+}
+li {
+  display: flex;
+  font-size: 1.2rem;
+  font-family: "Lato";
+}
+header{
+  margin-top: 50px;
+}
+header li {
+  justify-content: center;
+}
+li img {
+  width: 20%;
+}
+p {
+  font-size: 1.4rem;
+  font-family: "Lato";
+  margin-left: 42px;
+}
+#interestStep {
+  text-shadow: 2px 2px rgba(65, 0, 244, .1);
+}
+#connect {
+  margin-top: 20px;
+}
+#connect, #interestStep {
+  color: rgba(65, 0, 244);
+  font-weight: 600;
+}
+#listInput{
+  display: flex;
+  flex-flow: column;
+  font-size: 1.7rem;
+}
+#listInput div {
+  margin: 25px;
+  display: flex;
+  align-items: center;
+}
+label {
+  margin-right: 20px;
+}
+
+
+li i {
+  margin-right: 35px;
+}
+
+#addToList {
+  font-size: 1rem;
+  width: 15%;
+  font-family: "Lato";
+  border-radius: 50px;
+  background: #D1A1EE;
+  color: #fff;
+  /* padding: 16px 48px 18px; */
+  margin-bottom: 32px;
+}
+
+.shownList {
+  height: 50vh;
+  width: 100%;
+}
+/* .messages ol {
+  justify-content: flex-start;
+  flex-wrap: wrap;
+}
+.messages li {
+  font-family: "Lato";
+  font-size: 1.2rem;
+  margin: 5px;
+  border: 1px solid #D1A1EE;
+  background: rgb(209, 161, 238, .1);
+  list-style: none;
+  padding: 5px 20px;
+  width: 25%;
+} */
+
+#nextButton {
+  background: rgba(65, 0, 244);
+  border-radius: 50px;
+  font-size: 1rem;
+  color: white;
+  padding: 16px 0px 16px;
+  transition-duration: 1s;
+  width: 13%;
+  align-items: flex-start;
+  margin-left: 50px;
+}
+/******************************************
+/* ADDITIONAL STYLES
+/*******************************************/

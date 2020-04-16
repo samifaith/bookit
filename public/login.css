@@ -1,0 +1,18 @@
+html{
+  margin-top: 25vh;
+}
+
+body {
+     color: #000;
+     line-height: 1.4;
+     font-family: Helvetica, Arial, sans-serif;
+     background: rgb(49,25,112);
+     background: linear-gradient(90deg, rgba(49,25,112,1) 0%, rgba(67,47,222,1) 39%, rgba(117,0,255,1) 100%);
+     /* background: #432FDE; */
+     color: white;
+}
+
+button  {
+  background: purple !important;
+  border: none !important;
+}
