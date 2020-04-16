@@ -105,7 +105,6 @@ ol{
 }
 li {
   display: flex;
-<<<<<<< HEAD:public/interests.css
   font-size: 1.2rem;
   font-family: "Lato";
 }
@@ -115,17 +114,6 @@ header{
 header li {
   justify-content: center;
 }
-=======
-  /* justify-content: space-evenly; */
-  align-items: center;
-  font-size: 1.2rem;
-  font-family: "Lato";
-}
-li i {
-  margin-right: 35px;
-}
-
->>>>>>> f0d2bb74fce955e301d6415c111117868cb0e9b6:css/interests.css
 li img {
   width: 20%;
 }

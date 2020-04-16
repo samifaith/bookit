@@ -11,7 +11,6 @@ var userSchema = mongoose.Schema({
         email        : String,
         password     : String
     },
-<<<<<<< HEAD
     genres           : {
       romance          : Boolean,
       mystery          : Boolean,
@@ -23,27 +22,6 @@ var userSchema = mongoose.Schema({
       fiction          : Boolean,
       selfHelp         : Boolean
     }
-=======
-    facebook         : {
-        id           : String,
-        token        : String,
-        name         : String,
-        email        : String
-    },
-    twitter          : {
-        id           : String,
-        token        : String,
-        displayName  : String,
-        username     : String
-    },
-    google           : {
-        id           : String,
-        token        : String,
-        email        : String,
-        name         : String
-    }
-
->>>>>>> f0d2bb74fce955e301d6415c111117868cb0e9b6
 });
 
 // generating a hash

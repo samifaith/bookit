@@ -4,24 +4,15 @@
 // get all the tools we need
 var express  = require('express');
 var app      = express();
-<<<<<<< HEAD
 var port     = process.env.PORT || 7070;
-=======
-var port     = process.env.PORT || 8080;
->>>>>>> f0d2bb74fce955e301d6415c111117868cb0e9b6
 const MongoClient = require('mongodb').MongoClient
 var mongoose = require('mongoose');
 var passport = require('passport');
 var flash    = require('connect-flash');
-<<<<<<< HEAD
-=======
-
->>>>>>> f0d2bb74fce955e301d6415c111117868cb0e9b6
 var morgan       = require('morgan');
 var cookieParser = require('cookie-parser');
 var bodyParser   = require('body-parser');
 var session      = require('express-session');
-<<<<<<< HEAD
 const ObjectId = require('mongodb').ObjectID;
 const multer = require('multer');
 var configDB = require('./config/database.js');
@@ -35,18 +26,6 @@ mongoose.connect(configDB.url, (err, database) => {
   if (err) return console.log(err)
   db = database
   require('./app/routes.js')(app, passport, db, multer, ObjectId);
-=======
-
-var configDB = require('./config/database.js');
-
-var db
-
-// configuration ===============================================================
-mongoose.connect(configDB.url, (err, database) => {
-  if (err) return console.log(err)
-  db = database
-  require('./app/routes.js')(app, passport, db);
->>>>>>> f0d2bb74fce955e301d6415c111117868cb0e9b6
 }); // connect to our database
 
 //app.listen(port, () => {
@@ -85,12 +64,9 @@ app.use(flash()); // use connect-flash for flash messages stored in session
 // routes ======================================================================
 //require('./app/routes.js')(app, passport, db); // load our routes and pass in our app and fully configured passport
 
-<<<<<<< HEAD
 
 
 
-=======
->>>>>>> f0d2bb74fce955e301d6415c111117868cb0e9b6
 // launch ======================================================================
 app.listen(port);
 console.log('The magic happens on port ' + port);

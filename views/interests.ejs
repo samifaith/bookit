@@ -5,22 +5,12 @@
     <meta name="description" content="Your description goes here">
     <meta name="keywords" content="playlist, books, curated">
     <title>BookIt! Sign Up-Interests</title>
-<<<<<<< HEAD
-=======
-    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.2/css/bootstrap.min.css">
-    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css">
->>>>>>> f0d2bb74fce955e301d6415c111117868cb0e9b6
     <link rel="stylesheet" href="css/normalize.css">
 		<link rel="stylesheet" href="interests.css">
 		<link href="https://fonts.googleapis.com/css?family=Lato|Playfair+Display|Playfair+Display+SC&display=swap" rel="stylesheet">
 		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css">
 </head>
 <body>
-<<<<<<< HEAD
-=======
-
-
->>>>>>> f0d2bb74fce955e301d6415c111117868cb0e9b6
   <section id="leftPanel">
     <h1><img src="./images/booksPurple.png" alt="BookIt! Logo"> </h1>
     <p><span>Oh!</span></p>
@@ -36,7 +26,6 @@
           <li id="interestStep">INTERESTS</li>
         </ol>
       </header>
-<<<<<<< HEAD
       <p>Select the genres you love most.</p>
       <form id="listInput" user-id="<%=userId%>">
         <div class="">
@@ -70,26 +59,5 @@
   </section>
   <!-- <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/xml-js@1.6.11/lib/index.min.js"></script> -->
   <script type="text/javascript" src="main.js"></script>
-=======
-      <p>Did we get it right? Add or remove any genres listed.</p>
-      <form id="listInput" action="/interests" method="post">
-        <input id="listItem" type="text" name="genre">
-        <button id="addToList">Add</button>
-      </form>
-      <ul class="messages">
-        <% for(var i=0; i< genre.length; i++) {%>
-          <li>
-            <span><i class="far fa-times-circle"></i></span>
-            <span><%= genre[i].genre%></span>
-          </li>
-        <% } %>
-      </ul>
-
-      <button href="/profile" id="nextButton" type="submit">SUBMIT</button>
-    </div>
-  </section>
-  </section>
-
->>>>>>> f0d2bb74fce955e301d6415c111117868cb0e9b6
 </body>
 </html>

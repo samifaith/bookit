@@ -1,12 +1,8 @@
-<<<<<<< HEAD
 const convert = require('xml-js')
 const fetch = require('node-fetch')
 
 module.exports = function(app, passport, db, multer, ObjectId) {
 let goodreadsAPI = "pkPx0CaPv5dLSjiSVwWexA"
-=======
-module.exports = function(app, passport, db) {
->>>>>>> f0d2bb74fce955e301d6415c111117868cb0e9b6
 
 // normal routes ===============================================================
 
@@ -16,7 +12,6 @@ module.exports = function(app, passport, db) {
     });
 
     // PROFILE SECTION =========================
-<<<<<<< HEAD
     app.get('/profile', isLoggedIn, function(req, res) {
         let uId = ObjectId(req.session.passport.user)
         db.collection('demoday').find({'posterId': uId}).toArray(async (err, result) => {
@@ -78,33 +73,15 @@ module.exports = function(app, passport, db) {
     // app.post('/interests', (req, res) => {
     //   res.redirect('/interests')
     // })
-=======
-    app.get('/profile', function(req, res) {
-      db.collection('demoday').find().toArray((err, result) => {
-        if (err) return console.log(err)
-        res.render('profile.ejs', {
-          user : req.user,
-          demoday : result
-        })
-      })
-    });
-
-    app.post('/interests', (req, res) => {
-        res.redirect('/interests')
-    })
->>>>>>> f0d2bb74fce955e301d6415c111117868cb0e9b6
     // LOGOUT ==============================
     app.get('/logout', function(req, res) {
         req.logout();
         res.redirect('/');
     });
 
-<<<<<<< HEAD
 
 
 
-=======
->>>>>>> f0d2bb74fce955e301d6415c111117868cb0e9b6
 // message board routes ===============================================================
 
     // app.post('/messages', (req, res) => {
@@ -178,7 +155,6 @@ module.exports = function(app, passport, db) {
         }));
 
 
-<<<<<<< HEAD
         // INTERESTS =================================
         app.get('/interests',isLoggedIn, (req, res) => {
           db.collection('users').find({'local.email': req.user.local.email}).toArray((err, result) => {
@@ -186,19 +162,10 @@ module.exports = function(app, passport, db) {
             res.render('interests.ejs', {
               userId: result[0]._id,
               genres: result[0].genres
-=======
-        app.get('/interests', (req, res) => {
-          db.collection('demoday').find().toArray((err, result) => {
-            if (err) return console.log(err)
-            res.render('interests.ejs', {
-              user: req.user,
-              genre: result
->>>>>>> f0d2bb74fce955e301d6415c111117868cb0e9b6
             })
           })
         });
 
-<<<<<<< HEAD
         app.post('/interests',isLoggedIn, (req, res) => {
           db.collection('users').save({genres: req.body.genres}, (err, result) => {
             if (err) return console.log(err)
@@ -232,23 +199,6 @@ module.exports = function(app, passport, db) {
         //   })
         // })
 
-=======
-        app.post('/interests', (req, res) => {
-          db.collection('demoday').save({genre: req.body.genre}, (err, result) => {
-            if (err) return console.log(err)
-            console.log('saved to database')
-            res.redirect('/interests')
-          })
-        })
-
-        app.delete('/messages', (req, res) => {
-          db.collection('demoday').findOneAndDelete({genre: req.body.genre}, (err, result) => {
-            if (err) return res.send(500, err)
-            res.send('Message deleted!')
-          })
-        })
-
->>>>>>> f0d2bb74fce955e301d6415c111117868cb0e9b6
         // app.get('/interests', function(req, res) {
         //     res.render('interests.ejs', { message: req.flash('signupMessage') });
         // });
@@ -261,11 +211,7 @@ module.exports = function(app, passport, db) {
 // user account will stay active in case they want to reconnect in the future
 
     // local -----------------------------------
-<<<<<<< HEAD
     app.get('/unlink/local',   function(req, res) {
-=======
-    app.get('/unlink/local', isLoggedIn, function(req, res) {
->>>>>>> f0d2bb74fce955e301d6415c111117868cb0e9b6
         var user            = req.user;
         user.local.email    = undefined;
         user.local.password = undefined;
@@ -279,11 +225,6 @@ module.exports = function(app, passport, db) {
 // route middleware to ensure user is logged in
 function isLoggedIn(req, res, next) {
     if (req.isAuthenticated())
-<<<<<<< HEAD
       return next();
-=======
-        return next();
-
->>>>>>> f0d2bb74fce955e301d6415c111117868cb0e9b6
     res.redirect('/');
 }
