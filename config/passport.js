@@ -1,5 +1,17 @@
+<<<<<<< HEAD
 var LocalStrategy   = require('passport-local').Strategy;
 var User       		= require('../app/models/user');
+=======
+// config/passport.js
+
+// load all the things we need
+var LocalStrategy   = require('passport-local').Strategy;
+
+// load up the user model
+var User       		= require('../app/models/user');
+
+// expose this function to our app using module.exports
+>>>>>>> f0d2bb74fce955e301d6415c111117868cb0e9b6
 module.exports = function(passport) {
 
 	// =========================================================================
@@ -53,6 +65,7 @@ module.exports = function(passport) {
                 // set the user's local credentials
                 newUser.local.email    = email;
                 newUser.local.password = newUser.generateHash(password); // use the generateHash function in our user model
+<<<<<<< HEAD
                 newUser.local.firstName = req.body.firstName;
                 newUser.local.lastName = req.body.lastName
                 newUser.genres = {
@@ -77,6 +90,13 @@ module.exports = function(passport) {
 
                 };
 
+=======
+
+				// save the user
+                newUser.save(function(err) {
+                    if (err)
+                        throw err;
+>>>>>>> f0d2bb74fce955e301d6415c111117868cb0e9b6
                     return done(null, newUser);
                 });
             }

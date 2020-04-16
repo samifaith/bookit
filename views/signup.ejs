@@ -1,4 +1,5 @@
 <!doctype html>
+<<<<<<< HEAD
   <html>
     <head>
       <meta charset="utf-8">
@@ -13,31 +14,67 @@
   <body>
 
   <!-- SIGNUP FORM -->
+=======
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="description" content="Your description goes here">
+    <meta name="keywords" content="playlist, books, curated">
+    <title>BookIt! Sign Up</title>
+    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/normalize.css">
+		<link rel="stylesheet" href="signup.css">
+		<link href="https://fonts.googleapis.com/css?family=Lato|Playfair+Display|Playfair+Display+SC&display=swap" rel="stylesheet">
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css">
+</head>
+<body>
+
+>>>>>>> f0d2bb74fce955e301d6415c111117868cb0e9b6
   <% if (message.length > 0) { %>
       <div class="alert alert-danger"><%= message %></div>
   <% } %>
 
+<<<<<<< HEAD
   <section id="leftPanel">
     <h1><img src="images/booksPurple.png" alt="BookIt! Logo"></h1>
     <p><span>Oh!</span></p>
     <p><strong>The Places You'll Go</strong></p>
+=======
+  <!-- LOGIN FORM -->
+
+  <section id="leftPanel">
+    <h1><img src="images/booksPurple.png" alt="BookIt! Logo"> </h1>
+    <p><span>Oh!</span></p>
+    <p>The Places You'll Go</p>
+>>>>>>> f0d2bb74fce955e301d6415c111117868cb0e9b6
     <img id="audioGirl" src="images/audiogirl.png" alt="Audio Girl">
   </section>
   <section id="rightPanel">
     <div class="container">
       <header>
         <ol>
+<<<<<<< HEAD
           <li id="accountStep"><strong>ACCOUNT</strong></li>
           <li><img src="images/purpleplane.png" alt="planes"></li>
+=======
+          <li id="accountStep">ACCOUNT</li>
+          <li><img src="images/purpleplane.png" alt=""></li>
+>>>>>>> f0d2bb74fce955e301d6415c111117868cb0e9b6
           <li id="interestStep">INTERESTS</li>
         </ol>
       </header>
       <p>Create an account to discover your next great read.</p>
+<<<<<<< HEAD
       <form action="/signup" method="post">
+=======
+      <form class="" action="/signup" method="post">
+>>>>>>> f0d2bb74fce955e301d6415c111117868cb0e9b6
         <label for="firstName">First Name</label>
         <input type="text" id="firstName" name="firstName" value="">
         <label for="lastName">Last Name</label>
         <input type="text" id="lastName" name="lastName" value="">
+<<<<<<< HEAD
         <label for="email">Email</label>
         <input type="text" id="email" name="email" value="">
         <label for="password">Password</label>
@@ -51,4 +88,21 @@
   </section>
 
   </body>
+=======
+        <label for="username">Username</label>
+        <input type="text" id="username" name="username" value="">
+        <label for="password">Password</label>
+        <input type="password" id="password" name="password" value="">
+        <a href="/interests"><button type="submit">NEXT</button></a> 
+        <p id="connect">Connect your social media accounts to receive a curated reading experience.</p>
+        <button class="socialButtons" type="button"><i class="fab fa-facebook-f"></i>CONNECT YOUR FACEBOOK ACCOUNT</button>
+        <button class="socialButtons" type="button"><i class="fab fa-goodreads-g"></i>CONNECT YOUR GOODREADS ACCOUNT</button>
+      </form>
+    <p>Already have an account? <a href="/login">Login</a></p>
+    <p>Or go <a href="/">home</a>.</p>
+    </div>
+  </section>
+
+</body>
+>>>>>>> f0d2bb74fce955e301d6415c111117868cb0e9b6
 </html>
