@@ -8,19 +8,22 @@ I built an application called BookIt which gives readers just what they need for
 ![Image of BookIt!](signup.png)
 ![Image of BookIt!](interests.png)
 ![Image of BookIt!](profile.png)
+![Image of BookIt!](book-page.png)
+
 
 **Pages in Order:**
-1. index.html
-2. signup.html
-3. interest.html
-4. profile.html
+1. index.ejs
+2. signup.ejs
+3. interest.ejs
+4. profile.ejs
+5. bookpage.ejs
 
 **API's:**
-- Will be using GoodReads, Overdrive, & Facebook API to include data about the user that will align with the suggestions the application will provide.
+- Will be using Google Books API to include data that will align with the suggestions the application will provide.
 
 ### Development:
 **Languages Used:** HTML & CSS, JavaScript, Node.js, MongoDB
-Second wireframe of the site
+
 
 ### Optimizations:
-Need to finish the final edits to each page
+Need to finish the final edits to each page & connect API
