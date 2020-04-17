@@ -11,6 +11,12 @@ var userSchema = mongoose.Schema({
         email        : String,
         password     : String
     },
+    goodreads         : {
+        id           : String,
+        token        : String,
+        name         : String,
+        email        : String
+    },
     genres           : {
       romance          : Boolean,
       mystery          : Boolean,
@@ -21,7 +27,10 @@ var userSchema = mongoose.Schema({
       nonFiction       : Boolean,
       fiction          : Boolean,
       selfHelp         : Boolean
-    }
+    },
+    favGenres          : Array
+
+
 });
 
 // generating a hash

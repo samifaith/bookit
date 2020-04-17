@@ -1,5 +1,6 @@
 var LocalStrategy   = require('passport-local').Strategy;
 var User       		= require('../app/models/user');
+var GoodreadsStrategy = require('passport-goodreads').Strategy;
 module.exports = function(passport) {
 
 	// =========================================================================
@@ -20,11 +21,30 @@ module.exports = function(passport) {
         });
     });
 
+    passport.serializeUser(function(user, done) {
+      done(null, user);
+    });
+
+    passport.deserializeUser(function(obj, done) {
+      done(null, obj);
+    });
+
  	// =========================================================================
     // LOCAL SIGNUP ============================================================
     // =========================================================================
     // we are using named strategies since we have one for login and one for signup
 	// by default, if there was no name, it would just be called 'local'
+    passport.use(new GoodreadsStrategy({
+        consumerKey: "pkPx0CaPv5dLSjiSVwWexA",
+        consumerSecret: "3XGPhAHVl1nhDRWRMFnANExCn75Le5DKnRlrjez54",
+        passReqToCallback : true
+      },
+      function(token, tokenSecret, profile, done) {
+        User.findOrCreate({ goodreadsId: profile.id }, function (err, user) {
+          return done(err, user);
+        });
+      }
+    ));
 
     passport.use('local-signup', new LocalStrategy({
         // by default, local strategy uses username and password, we will override with email

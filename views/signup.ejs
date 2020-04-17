@@ -24,7 +24,7 @@
     <img id="audioGirl" src="images/audiogirl.png" alt="Audio Girl">
   </section>
   <section id="rightPanel">
-    <div class="container">
+
       <header>
         <ol>
           <li id="accountStep"><strong>ACCOUNT</strong></li>
@@ -32,8 +32,9 @@
           <li id="interestStep">INTERESTS</li>
         </ol>
       </header>
-      <p>Create an account to discover your next great read.</p>
+    <div class="container">
       <form action="/signup" method="post">
+        <p>Create an account to discover your next great read.</p>
         <label for="firstName">First Name</label>
         <input type="text" id="firstName" name="firstName" value="">
         <label for="lastName">Last Name</label>
@@ -42,8 +43,6 @@
         <input type="text" id="email" name="email" value="">
         <label for="password">Password</label>
         <input type="password" id="password" name="password" value="">
-        <p id="connect">Connect your social media accounts to receive a curated reading experience.</p>
-        <button class="socialButtons" type="button"><i class="fab fa-goodreads-g"></i>CONNECT YOUR GOODREADS ACCOUNT</button>
         <button type="submit">NEXT</button>
       </form>
     <p>Already have an account? <a href="/login">Login</a></p>

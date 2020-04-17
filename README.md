@@ -9,9 +9,6 @@ I built an application called BookIt which gives readers just what they need for
 ![Image of BookIt!](interests.png)
 ![Image of BookIt!](profile.png)
 
-**Below dashboard to include panel with up-to-date info about your current reads**
-![Image of BookIt!](dashboard.png)
-
 **Pages in Order:**
 1. index.html
 2. signup.html

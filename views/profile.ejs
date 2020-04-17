@@ -16,36 +16,32 @@
         <img src="images/booksPurple.png" alt="BookIt! Logo">
       </section>
       <section id="dropdown">
-        <label for="options-select">Made For You: </label>
-        <select name="options" id="options-select">
-          <option value="books">Books</option>
-          <option value="audiobooks">Audio Books</option>
-          <option value="podcasts">Podcast</option>
-        </select>
+        <label for="options-selecBrt">Made For You: <span id="books">Books</span></label>
       </section>
     </header>
     <div class="hero">
       <section class="mainSec" id="genre1">
         <div class="circleDiv">
           <section class="circle">
-            <p>4/5</p>
+            <p></p>
           </section>
         </div>
         <div class="recommendDiv">
           <section class="recommend">
             <p>
               <ul>
-                <li><%= goodreads[0].best_book.title._text %></li>
+                <li></li>
               </ul>
             </p>
           </section>
           <section class="recommend">
-            <p>BOOK PREVIEW</p>
+            <p></p>
           </section>
         </div>
         <div class="topicDiv">
           <section class="topic">
-            <h3>TOPIC</h3>
+            <h3><%= favGenres[0] %></h3>
+            <input id="topic1" type="hidden" value="<%= favGenres[0] %>">
             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
           </section>
         </div>
@@ -53,46 +49,48 @@
       <section class="mainSec" id="genre2">
         <div class="topicDiv">
           <section class="topic">
-            <h3>TOPIC</h3>
+            <h3><%= favGenres[1] %></h3>
+            <input id="topic2" type="hidden" value="<%= favGenres[1] %>">
             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
           </section>
         </div>
         <div class="recommendDiv">
           <section class="recommend">
-            <p>BOOK PREVIEW</p>
+            <p ></p>
           </section>
           <section class="recommend">
-            <p>BOOK PREVIEW</p>
+            <p></p>
           </section>
         </div>
         <div class="circleDiv">
           <section class="circle">
-            <p>2/5</p>
+            <p></p>
           </section>
         </div>
       </section>
       <section class="mainSec" id="genre3">
         <div class="circleDiv">
           <section class="circle">
-            <p>1/5</p>
+            <p></p>
           </section>
         </div>
         <div class="recommendDiv">
           <section class="recommend">
-            <p>BOOK PREVIEW</p>
+            <p></p>
           </section>
           <section class="recommend">
-            <p>BOOK PREVIEW</p>
+            <p></p>
           </section>
         </div>
         <div class="topicDiv">
           <section class="topic">
-            <h3>TOPIC</h3>
+            <h3><%= favGenres[2] %></h3>
+            <input id="topic3" type="hidden" value="<%= favGenres[2] %>">
             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
           </section>
         </div>
       </section>
-
+      <script type="text/javascript" src="profile.js"></script>
       <!-- <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/xml-js@1.6.11/lib/index.min.js"></script> -->
     </div>
   </body>
