@@ -8,8 +8,8 @@ form.addEventListener('submit', function (e){
     for (let i = 0; i<inputs.length; i++){
       let input = inputs[i];
       if (input.checked){
-        favGenres.push(input.value)
         genres[input.value] = true
+        favGenres.push(input.value)
       } else{
         genres[input.value] = false
       }
