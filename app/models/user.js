@@ -22,12 +22,30 @@ var userSchema = mongoose.Schema({
       mystery          : Boolean,
       fantasy          : Boolean,
       scienceFiction   : Boolean,
+<<<<<<< Updated upstream
       thrillers        : Boolean,
+=======
+      thriller         : Boolean,
+>>>>>>> Stashed changes
       youngAdult       : Boolean,
       nonFiction       : Boolean,
       fiction          : Boolean,
       selfHelp         : Boolean
     },
+<<<<<<< Updated upstream
+=======
+    genreCount         : {
+      romance          : Number,
+      mystery          : Number,
+      fantasy          : Number,
+      scienceFiction   : Number,
+      thriller         : Number,
+      youngAdult       : Number,
+      nonFiction       : Number,
+      fiction          : Number,
+      selfHelp         : Number
+    },
+>>>>>>> Stashed changes
     favGenres          : Array
 
 

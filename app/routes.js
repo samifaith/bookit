@@ -46,6 +46,7 @@ module.exports = function (app, passport, db, multer, ObjectId) {
 
 
 
+<<<<<<< Updated upstream
   function getBooks() {
     return fetch(
       'https://www.googleapis.com/books/v1/volumes?q=subject:romance&filter=ebooks&orderBy=relevance&printType=books&startIndex=0&maxResults=40'
@@ -62,11 +63,16 @@ module.exports = function (app, passport, db, multer, ObjectId) {
       });
   }
 
+=======
+>>>>>>> Stashed changes
   app.get("/profile", isLoggedIn, function (req, res) {
     db.collection("users").find({ "local.email": req.user.local.email })
       .toArray(async (err, result) => {
         if (err) return console.log(err);
+<<<<<<< Updated upstream
         let bResult = await getBooks();
+=======
+>>>>>>> Stashed changes
         res.render("profile.ejs", {
           user: req.user,
           demoday: result,
@@ -108,7 +114,30 @@ module.exports = function (app, passport, db, multer, ObjectId) {
     res.redirect("/");
   });
 
+<<<<<<< Updated upstream
   // message board routes ===============================================================
+=======
+  // GENRE COUNT INCREASE ===============================================================
+  app.put('/genreCount', (req, res) => {
+      console.log(req.body)
+      console.log(req.user);
+      let genreTitle = req.body.genreTitle
+      let genreCountSearch = 'genreCount.' + genreTitle
+      db.collection('users')
+      .findOneAndUpdate({ _id: req.user._id }, {
+        // this allows you to increment count by wahter num you like
+        $inc: {
+          [genreCountSearch]: 1
+        }
+      }, {
+        sort: {_id: -1},
+        upsert: true
+      }, (err, result) => {
+        if (err) return res.send(err)
+        res.send(result)
+      })
+    })
+>>>>>>> Stashed changes
 
   // app.post('/messages', (req, res) => {
   //   db.collection('demoday').save({name: req.body.name, msg: req.body.msg, thumbUp: 0, thumbDown:0}, (err, result) => {
@@ -118,6 +147,7 @@ module.exports = function (app, passport, db, multer, ObjectId) {
   //   })
   // })
 
+<<<<<<< Updated upstream
   // app.put('/messages', (req, res) => {
   //   db.collection('demoday')
   //   .findOneAndUpdate({name: req.body.name, msg: req.body.msg}, {
@@ -133,6 +163,8 @@ module.exports = function (app, passport, db, multer, ObjectId) {
   //   })
   // })
   //
+=======
+>>>>>>> Stashed changes
   // app.put('/messagesDown', (req, res) => {
   //   db.collection('demoday')
   //     .findOneAndUpdate({name: req.body.name, msg: req.body.msg}, {
@@ -220,13 +252,20 @@ module.exports = function (app, passport, db, multer, ObjectId) {
       }
     );
   });
+<<<<<<< Updated upstream
+=======
+  // BOOKPAGE =================================
+>>>>>>> Stashed changes
 
   app.get("/bookpage", isLoggedIn, (req, res) => {
     db.collection("users").find({ "local.email": req.user.local.email })
       .toArray((err, result) => {
         if (err) return console.log(err);
         res.render("bookpage.ejs", {
+<<<<<<< Updated upstream
 
+=======
+>>>>>>> Stashed changes
         });
       });
   });

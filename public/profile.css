@@ -7,6 +7,11 @@
 }
 body {
   font-size: 10px;
+<<<<<<< Updated upstream
+=======
+  background: rgb(22, 9, 39);
+  color: white;
+>>>>>>> Stashed changes
 }
 
 /******************************************
@@ -18,12 +23,22 @@ body {
 /*******************************************/
 header {
   display: flex;
+<<<<<<< Updated upstream
   /* height: 10vh; */
   color: rgb(67, 47, 222);
   border-bottom: 1px solid rgb(181,176,255, .15);
 }
 img{
   max-width: 30%;
+=======
+  border-bottom: 1px solid rgb(181,176,255, .15);
+  height: 10vh;
+  background: rgb(25, 25, 25, .2);
+}
+#logo img{
+  height: 10vh;
+  margin-left: 50px;
+>>>>>>> Stashed changes
 }
 #logo {
   display: flex;
@@ -34,10 +49,35 @@ img{
   display: flex;
   flex: 3;
   align-items: center;
+<<<<<<< Updated upstream
   font-size: 2rem;
   font-family: "Playfair Display";
 }
 
+=======
+  font-size: 2.5rem;
+  font-family: "Playfair Display";
+  justify-content: space-between;
+}
+
+#dropdown a, #dropdown input {
+  background: transparent;
+  border-radius: 15px;
+  margin-right: 20px;
+}
+
+#dropdown input{
+  border: 1px solid rgb(209, 160, 238);
+  font-size: 1rem;
+  font-family: "Lato";
+  padding: 7px 20px;
+  color: white;
+}
+
+#dropdown input:hover{
+  background-color:rgb(209, 160, 238);
+}
+>>>>>>> Stashed changes
 /******************************************
 /* HERO
 /*******************************************/
@@ -48,7 +88,10 @@ img{
 .mainSec {
   display: flex;
 }
+<<<<<<< Updated upstream
 
+=======
+>>>>>>> Stashed changes
 .circleDiv {
   display: flex;
   justify-content: space-evenly;
@@ -60,11 +103,24 @@ img{
   align-items: center;
   font-size: 1.5rem;
   font-family: "Lato";
+<<<<<<< Updated upstream
   color: rgb(67, 47, 222);
   border-radius: 100%;
   align-self: center;
 }
 
+=======
+  border-radius: 100%;
+  align-self: center;
+}
+h3{
+  font-size: 2.3rem;
+}
+p{
+  font-size: 1.2rem;
+  color: rgb(145, 148, 150)
+}
+>>>>>>> Stashed changes
 
 #genre3 .circle {
   color: white;
@@ -80,19 +136,26 @@ img{
   height: 25vh;
   /* border: 1px solid orange; */
   align-self: center;
+<<<<<<< Updated upstream
   color: rgb(67,47,222);
+=======
+>>>>>>> Stashed changes
   font-family: "Lato";
   font-size: 1rem;
 }
 .recommendDiv {
   display: flex;
+<<<<<<< Updated upstream
   /* border: 1px solid blue; */
+=======
+>>>>>>> Stashed changes
   width: 33.333%;
   height: 30vh;
   justify-content: space-evenly;
 }
 .recommend {
   width: 15vw;
+<<<<<<< Updated upstream
   /* border: 1px solid green; */
   height: 25vh;
   align-self: center;
@@ -111,4 +174,37 @@ img{
 }
 #genre3 .topic, #genre3 .circle {
   color: white;
+=======
+  height: 25vh;
+  border-radius: 15px;
+  align-self: center;
+  background: linear-gradient(#352d5740, rgba(0, 0, 0, 0));
+  display: flex;
+  padding-left: 20px;
+  align-items: center;
+}
+.recommend img {
+  border-radius: 15px;
+  box-shadow: 1px 1px 16px -2px rgba(0, 0, 0, 0.5);
+}
+.bookInfo{
+  text-align: center;
+  margin-left: 10px;
+}
+.bookInfo p {
+  font-size: 1rem;
+  font-family: "Lato";
+  margin: 4px;
+}
+.title{
+  color: white;
+}
+.author{
+  color: pink;
+}
+#genre1, #genre2, #genre3{
+  border-bottom: 1px solid rgb(181,176,255, .15);
+}
+#genre3 .topic, #genre3 .circle {
+>>>>>>> Stashed changes
 }
