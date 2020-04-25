@@ -1,65 +1,61 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
-  <head>
-    <meta charset="utf-8">
-    <meta name="description" content="Your description goes here">
-    <meta name="keywords" content="playlist, books, curated">
-    <title>Made For You</title>
-    <link rel="stylesheet" href="normalize.css">
-    <link rel="stylesheet" href="profile.css">
-    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css">
-    <link href="https://fonts.googleapis.com/css?family=Lato:500,600,700,700i|Playfair+Display:500,600,700,700i|Playfair+Display+SC:500,600,700,700i&display=swap" rel="stylesheet">
-  </head>
-  <body>
-    <header>
-      <section id="logo">
-        <img src="images/booksPurple.png" alt="BookIt! Logo">
-      </section>
-      <section id="dropdown">
-        <label for="options-selecBrt">Made For You: <span id="books">Books</span></label>
-      </section>
-    </header>
-    <div class="hero">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="description" content="Your description goes here">
+  <meta name="keywords" content="playlist, books, curated">
+  <title>Made For You</title>
+  <link rel="stylesheet" href="normalize.css">
+  <link rel="stylesheet" href="profile.css">
+  <link rel="stylesheet" href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css">
+  <link href="https://fonts.googleapis.com/css?family=Lato:500,600,700,700i|Playfair+Display:500,600,700,700i|Playfair+Display+SC:500,600,700,700i&display=swap" rel="stylesheet">
+</head>
+
+<body>
+  <header>
+    <section id="logo">
+      <a href="/"><img src="images/booksWhiote.png" alt="BookIt! Logo"></a>
+    </section>
+    <section id="dropdown">
+      <label for="options-selecBrt">Made For You: <span id="books">Books</span></label>
+      <a href="/interests"><input type="button" name="" value="INTERESTS"></a>
+    </section>
+  </header>
+  <div class="hero">
+  </div>
+    <script type="text/javascript" src="profile.js"></script>
+    <script id="sectionTemplate" type="text/html">
       <section class="mainSec" id="genre1">
-        <div class="circleDiv">
-          <section class="circle">
-            <p></p>
+        <div class="topicDiv">
+          <section class="topic">
+            <h3 class="favGenreHeader"><%= favGenres[0] %></h3>
+            <input class="topic1" type="hidden" value="<%= favGenres[0] %>">
+            <p class="genreOverview1"></p>
           </section>
         </div>
         <div class="recommendDiv">
           <section class="recommend">
-            <p>
-              <ul>
-                <li></li>
-              </ul>
-            </p>
+            <a href="#"><img data-category='<%= favGenres[0] %>' src="" alt="book" class="genreCount imgBook1"></a>
+            <div class="bookInfo">
+              <p class="title title1"></p>
+              <p class="author author1"></p>
+              <div class="fave">
+                <img class="faveIcon" src="images/bookheart.png" alt="favorite book">
+                <p>Favorite</p>
+              </div>
+            </div>
           </section>
           <section class="recommend">
-            <p></p>
-          </section>
-        </div>
-        <div class="topicDiv">
-          <section class="topic">
-            <h3><%= favGenres[0] %></h3>
-            <input id="topic1" type="hidden" value="<%= favGenres[0] %>">
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-          </section>
-        </div>
-      </section>
-      <section class="mainSec" id="genre2">
-        <div class="topicDiv">
-          <section class="topic">
-            <h3><%= favGenres[1] %></h3>
-            <input id="topic2" type="hidden" value="<%= favGenres[1] %>">
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-          </section>
-        </div>
-        <div class="recommendDiv">
-          <section class="recommend">
-            <p ></p>
-          </section>
-          <section class="recommend">
-            <p></p>
+            <a href="#"><img data-category='<%= favGenres[0] %>' src="" alt="book" class="genreCount imgBook2"></a>
+            <div class="bookInfo">
+              <p class="title title2"></p>
+              <p class="author author2"></p>
+              <div class="fave">
+                <img class="faveIcon" src="images/bookheart.png" alt="favorite book">
+                <p>Favorite</p>
+              </div>
+            </div>
           </section>
         </div>
         <div class="circleDiv">
@@ -68,30 +64,10 @@
           </section>
         </div>
       </section>
-      <section class="mainSec" id="genre3">
-        <div class="circleDiv">
-          <section class="circle">
-            <p></p>
-          </section>
-        </div>
-        <div class="recommendDiv">
-          <section class="recommend">
-            <p></p>
-          </section>
-          <section class="recommend">
-            <p></p>
-          </section>
-        </div>
-        <div class="topicDiv">
-          <section class="topic">
-            <h3><%= favGenres[2] %></h3>
-            <input id="topic3" type="hidden" value="<%= favGenres[2] %>">
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-          </section>
-        </div>
-      </section>
-      <script type="text/javascript" src="profile.js"></script>
-      <!-- <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/xml-js@1.6.11/lib/index.min.js"></script> -->
-    </div>
-  </body>
+
+    </script>
+    <!-- <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/xml-js@1.6.11/lib/index.min.js"></script> -->
+  </div>
+</body>
+
 </html>

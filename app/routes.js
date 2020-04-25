@@ -44,55 +44,52 @@ module.exports = function (app, passport, db, multer, ObjectId) {
   //   })
   // });
 
-
   app.get("/profile", isLoggedIn, function (req, res) {
     db.collection("users").find({ "local.email": req.user.local.email })
       .toArray(async (err, result) => {
         if (err) return console.log(err);
-        let bResult = await getBooks();
         res.render("profile.ejs", {
           user: req.user,
           demoday: result,
-          books: bResult,
           favGenres: result[0].favGenres,
         });
       });
   });
 
-  function getBooks() {
-    return fetch(
-      'https://www.googleapis.com/books/v1/volumes?q=subject:romance&filter=ebooks&orderBy=relevance&printType=books&startIndex=0&maxResults=40'
-    )
-      .then((res) => res.json()) // parse response as JSON (can be res.text() for plain response)
-      .then((response) => {
-        response.items.map(({volumeInfo}) => {
-          if (volumeInfo.language == "en" && volumeInfo.averageRating > 3){
-          console.log(volumeInfo,
-            volumeInfo.ratingsCount,
-            volumeInfo.language,
-            volumeInfo.averageRating,
-            volumeInfo.previewLink,
-            volumeInfo.infoLink,
-            volumeInfo.title,
-            volumeInfo.authors,
-            volumeInfo.categories)
-          }
-        })
-      })
-      .catch((err) => {
-        console.log(`error ${err}`);
-      });
-  }
-  // app.post('/interests', (req, res) => {
-  //   res.redirect('/interests')
-  // })
   // LOGOUT ==============================
   app.get("/logout", function (req, res) {
     req.logout();
     res.redirect("/");
   });
+  // GENRE COUNT INCREASE ===============================================================
+  app.get('/genreStats', (req, res) => {
+      db.collection('users')
+      .find({ _id: req.user._id })
+        .toArray(async (err, result) => {
+          if (err) return res.send(err)
+          res.send(result[0].genreCount)
+      })
+    })
 
-  // message board routes ===============================================================
+  app.put('/genreCount', (req, res) => {
+      console.log(req.body)
+      console.log(req.user);
+      let genreTitle = req.body.genreTitle
+      let genreCountSearch = 'genreCount.' + genreTitle
+      db.collection('users')
+      .findOneAndUpdate({ _id: req.user._id }, {
+        // this allows you to increment count by wahter num you like
+        $inc: {
+          [genreCountSearch]: 1
+        }
+      }, {
+        sort: {_id: -1},
+        upsert: true
+      }, (err, result) => {
+        if (err) return res.send(err)
+        res.send(result)
+      })
+    })
 
   // app.post('/messages', (req, res) => {
   //   db.collection('demoday').save({name: req.body.name, msg: req.body.msg, thumbUp: 0, thumbDown:0}, (err, result) => {
@@ -102,21 +99,6 @@ module.exports = function (app, passport, db, multer, ObjectId) {
   //   })
   // })
 
-  // app.put('/messages', (req, res) => {
-  //   db.collection('demoday')
-  //   .findOneAndUpdate({name: req.body.name, msg: req.body.msg}, {
-  //     $set: {
-  //       thumbUp:req.body.thumbUp + 1
-  //     }
-  //   }, {
-  //     sort: {_id: -1},
-  //     upsert: true
-  //   }, (err, result) => {
-  //     if (err) return res.send(err)
-  //     res.send(result)
-  //   })
-  // })
-  //
   // app.put('/messagesDown', (req, res) => {
   //   db.collection('demoday')
   //     .findOneAndUpdate({name: req.body.name, msg: req.body.msg}, {
@@ -161,8 +143,7 @@ module.exports = function (app, passport, db, multer, ObjectId) {
   });
 
   // process the signup form
-  app.post(
-    "/signup",
+  app.post("/signup",
     passport.authenticate("local-signup", {
       successRedirect: "/interests", // redirect to the secure profile section
       failureRedirect: "/signup", // redirect back to the signup page if there is an error
@@ -170,21 +151,6 @@ module.exports = function (app, passport, db, multer, ObjectId) {
     })
   );
 
-  app.get(
-    "/auth/goodreads",
-    passport.authenticate("goodreads", {
-      successRedirect: "/interests", // redirect to the secure profile section
-      failureRedirect: "/signup", // redirect back to the signup page if there is an error
-      failureFlash: true, // allow flash messages
-    })
-  );
-  app.post(
-    "/auth/goodreads/callback",
-    passport.authenticate("goodreads", {
-      successRedirect: "/return", // redirect to the secure profile section
-      failureRedirect: "/login",
-    })
-  );
 
   // INTERESTS =================================
   app.get("/interests", isLoggedIn, (req, res) => {
@@ -200,7 +166,6 @@ module.exports = function (app, passport, db, multer, ObjectId) {
   });
 
   app.put("/interests", isLoggedIn, (req, res) => {
-    console.log(req.body.favGenres);
     db.collection("users").findOneAndUpdate(
       { _id: req.user._id },
       {
@@ -220,6 +185,18 @@ module.exports = function (app, passport, db, multer, ObjectId) {
         res.redirect("/profile");
       }
     );
+  });
+
+  // BOOKPAGE =================================
+
+
+  app.get("/bookpage", isLoggedIn, (req, res) => {
+    db.collection("users").find({ "local.email": req.user.local.email })
+      .toArray((err, result) => {
+        if (err) return console.log(err);
+        res.render("bookpage.ejs", {
+        });
+      });
   });
 
   // app.put('/interests',isLoggedIn, (req, res) => {

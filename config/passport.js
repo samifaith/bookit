@@ -74,17 +74,28 @@ module.exports = function(passport) {
                 newUser.local.email    = email;
                 newUser.local.password = newUser.generateHash(password); // use the generateHash function in our user model
                 newUser.local.firstName = req.body.firstName;
-                newUser.local.lastName = req.body.lastName
+                newUser.local.lastName = req.body.lastName;
                 newUser.genres = {
                   romance : false,
                   mystery : false,
                   fantasy : false,
                   scienceFiction : false,
-                  thrillers : false,
-                  youngAdult : false,
+                  thriller  : false,
+                  juvenile : false,
                   nonFiction : false,
                   fiction : false,
                   selfhelp : false
+                };
+                newUser.genreCount = {
+                  romance : 0,
+                  mystery : 0,
+                  fantasy : 0,
+                  scienceFiction : 0,
+                  thriller  : 0,
+                  juvenile : 0,
+                  nonFiction : 0,
+                  fiction : 0,
+                  selfhelp : 0
                 }
 
   				// save the user

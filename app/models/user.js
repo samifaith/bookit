@@ -22,11 +22,22 @@ var userSchema = mongoose.Schema({
       mystery          : Boolean,
       fantasy          : Boolean,
       scienceFiction   : Boolean,
-      thrillers        : Boolean,
-      youngAdult       : Boolean,
-      nonFiction       : Boolean,
+      thriller         : Boolean,
+      juvenile         : Boolean,
+      nonFiction      : Boolean,
       fiction          : Boolean,
       selfHelp         : Boolean
+    },
+    genreCount         : {
+      romance          : Number,
+      mystery          : Number,
+      fantasy          : Number,
+      scienceFiction   : Number,
+      thriller         : Number,
+      juvenile         : Number,
+      nonFiction       : Number,
+      fiction          : Number,
+      selfHelp         : Number
     },
     favGenres          : Array
 
