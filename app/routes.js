@@ -106,6 +106,27 @@ module.exports = function (app, passport, db, multer, ObjectId) {
       })
     })
 
+    app.get('/fave', isLoggedIn, function(req, res) {
+        let uId = ObjectId(req.session.passport.user)
+        db.collection('favorites').find({'posterId': uId}).toArray((err, result) => {
+          if (err) return console.log(err)
+          res.render('fave.ejs', {
+            user : req.user,
+            favorites: result
+          })
+        })
+    });
+
+    app.delete('/faveDelete', (req, res) => {
+      let postId = ObjectId(req.body.postId)
+      db.collection('favorites').findOneAndDelete({
+        _id: postId,
+      }, (err, result) => {
+        if (err) return res.send(500, err)
+        res.send('Message deleted!')
+      })
+    })
+
   // app.post('/messages', (req, res) => {
   //   db.collection('demoday').save({name: req.body.name, msg: req.body.msg, thumbUp: 0, thumbDown:0}, (err, result) => {
   //     if (err) return console.log(err)
@@ -159,7 +180,7 @@ module.exports = function (app, passport, db, multer, ObjectId) {
   // process the signup form
   app.post("/signup",
     passport.authenticate("local-signup", {
-      successRedirect: "/interests", // redirect to the secure profile section
+      successRedirect: "/profile", // redirect to the secure profile section
       failureRedirect: "/signup", // redirect back to the signup page if there is an error
       failureFlash: true, // allow flash messages
     })

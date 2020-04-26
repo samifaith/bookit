@@ -6,7 +6,6 @@
   box-sizing: border-box;
 }
 body {
-  font-size: 10vh;
   background: linear-gradient(360deg, rgba(25,13,41,1) 39%, rgba(33,14,59,1) 80%, rgba(38,27,99,1) 100%);
   color: rgba(255, 255, 255);
 }
@@ -30,6 +29,8 @@ body {
 /*******************************************/
 header {
   display: flex;
+  justify-content: center;
+  align-items: center;
   border-bottom: 1px solid rgb(181,176,255, .15);
   height: 10vh;
   background: rgb(25, 25, 25, .2);
@@ -45,11 +46,31 @@ header {
 
 #dropdown {
   display: flex;
+  flex-flow: column;
   flex: 3;
   align-items: center;
-  font-size: 4.5vh;
+  font-size: 1.1vw;
   font-family: "Playfair Display";
   justify-content: space-between;
+}
+h1{
+  margin: 0;
+}
+h2{
+  text-align: center;
+  font-size: 1.2vw;
+  font-family: "Lato";
+  color: rgba(255, 255, 255, .7);
+  background: rgb(121, 90, 140, .1);
+  margin: 0;
+  padding: 10px 0;
+}
+
+#dropdown div {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
 }
 
 #dropdown a, #dropdown input{
@@ -70,8 +91,8 @@ header {
 
 #dropdown input:hover, .fave:hover{
   background-color:rgb(209, 160, 238)
-
 }
+
 
 /******************************************
 /* HERO
