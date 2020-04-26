@@ -11,7 +11,18 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css">
   </head>
   <body>
-    <ul>
+    <header>
+      <section id="logo">
+        <a href="/"><img src="images/booksWhiote.png" alt="BookIt! Logo"></a>
+      </section>
+      <section id="dropdown">
+        <div class="">
+          <a href="/profile"><input type="button" name="" value="PROFILE"></a>
+          <a href="/fave"><input type="button" name="" value="FAVORITES"></a>
+        </div>
+      </section>
+    </header>
+    <ul id="hero">
       <% for (let i = 0; i < favorites.length; i++) { %>
         <li>
           <img src="<%= favorites[i].bookImg %>" alt="">
