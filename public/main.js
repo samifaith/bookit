@@ -28,7 +28,6 @@ form.addEventListener('submit', function (e){
       })
     })
     .then(function (response) {
-      // console.log(response)
         window.location.href= '/profile'
     })
   })

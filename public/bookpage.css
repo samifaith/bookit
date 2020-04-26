@@ -8,7 +8,6 @@
      -webkit-box-sizing: border-box; /* Safari/Chrome/iOS/Android */
      box-sizing: border-box; /* IE */
 }
-
 /* Clear fix hack */
 .clearfix:after {
      content: ".";
@@ -42,7 +41,7 @@ body {
      font-size: 10px;
      line-height: 1.4;
      font-family: "Lato", Arial, sans-serif;
-     background: linear-gradient(90deg, rgba(49,25,112,1) 0%, rgba(67,47,222,1) 39%, rgba(117,0,255,1) 100%);
+     background: linear-gradient(360deg, rgba(25,13,41,1) 39%, rgba(33,14,59,1) 80%, rgba(38,27,99,1) 100%);
      height: 100vh;
 }
 
@@ -56,7 +55,6 @@ body {
 header{
   height: 10vh;
   display: flex;
-  justify-content:
   margin-right: 50px;
 }
 /******************************************
@@ -64,34 +62,45 @@ header{
 /*******************************************/
 #hero{
   display: flex;
-  height: 90vh;
+  justify-content: center;
+  align-content: center;
+  margin: 10vh 20vw;
 }
-
+.top {
+  display: flex;
+  width: 50vw;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
 /******************************************
 /* LEFT PANEL
 /*******************************************/
-#leftPanel{
+#rightPanel{
   display: flex;
   flex: 1;
   padding: 50px;
+  justify-content: center;
+  align-items: center;
 }
 #book{
-  width: 100%;
-  height: 70vh;
+  height: 20vh;
   background: white;
   border-radius: 20px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, .2);
 }
+#book img{
+  border-radius: 20px;
+  box-shadow: 1px 1px 16px -2px rgba(0, 0, 0, 0.5);
+}
+
 /******************************************
 /* RIGHT PANEL
 /*******************************************/
-#rightPanel{
+#leftPanel{
   display: flex;
   flex-flow: column;
   color: white;
   flex: 1;
-  padding: 50px;
-  height: 80vh;
 }
 h2{
   font-size: 2.4rem;
@@ -128,8 +137,11 @@ p{
   font-size: .9vw;
   color: rgb(255, 255, 255, .90);
 }
-.fave:hover{
+.fave:hover {
   background-color:rgb(209, 160, 238)
+}
+.bottom {
+  color: white;
 }
 /******************************************
 /* ADDITIONAL STYLES
