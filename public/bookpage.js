@@ -8,6 +8,8 @@ fetch(
     document.getElementById('bookimage').src = `${response.items[0].volumeInfo.imageLinks.thumbnail}`
     document.querySelector('.bTitle').innerText = `${response.items[0].volumeInfo.title}`
     document.querySelector('.bAuthor').innerText = `${response.items[0].volumeInfo.authors}`
+    document.querySelector('.purchase').href = `${response.items[0].saleInfo.buyLink}`
+    document.querySelector('.description').innerText = `${response.items[0].volumeInfo.description}`
     console.log(response)
   })
   .catch((err) => {
@@ -19,15 +21,15 @@ fetch(
 
     Array.from(fave).forEach((images) => {
       images.addEventListener('click', (e) => {
-        // console.log(e.target.parentNode.childNodes[1].innerText)
+        // console.log(e.target.parentNode.parentNode.parentNode.childNodes[3].childNodes[1].childNodes[1].src)
         // console.log(e.target.parentNode.childNodes[3].innerText)
-        // console.log(e.target.parentNode.parentNode.childNodes[1].childNodes[1].childNodes[1].src)
+        // // console.log(e.target.parentNode.parentNode.childNodes[1].childNodes[1].childNodes[1].src)
+        // console.log(e.target.parentNode.parentNode.childNodes[3])
+        let bookTitle = e.target.parentNode.parentNode.childNodes[1].innerText
+        let bookAuthor = e.target.parentNode.parentNode.childNodes[3].innerText
+        let bookImg = e.target.parentNode.parentNode.parentNode.childNodes[3].childNodes[1].childNodes[1].src
 
-        let bookTitle = e.target.parentNode.childNodes[1].innerText
-        let bookAuthor = e.target.parentNode.childNodes[3].innerText
-        let bookImg = e.target.parentNode.parentNode.childNodes[1].childNodes[1].childNodes[1].src
-
-        console.log(bookTitle, bookAuthor, bookImg)
+        // console.log(e.target.parentNode.parentNode.parentNode.childNodes[3].childNodes[1].childNodes[1].src)
         // console.log(bookTitle)
 
         fetch('/fave', {
