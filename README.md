@@ -5,22 +5,25 @@ I built an application called BookIt which gives readers just what they need for
 
 
 ![Image of BookIt!](bookit-home.png)
-![Image of BookIt!](signup.png)
 ![Image of BookIt!](interests.png)
 ![Image of BookIt!](profile.png)
+![Image of BookIt!](favorite.png)
+![Image of BookIt!](bookpage.png)
+
 
 **Pages in Order:**
-1. index.html
-2. signup.html
-3. interest.html
-4. profile.html
+1. index.ejs
+2. interest.ejs
+3. profile.ejs
+4. favorite.ejs
+5. bookpage.png
+
 
 **API's:**
-- Will be using Google's API to include data about the user that will align with the suggestions the application will provide.
+- Using Google's API to include data about the user that will align with the suggestions the application will provide.
 
 ### Development:
 **Languages Used:** HTML & CSS, JavaScript, Node.js, MongoDB
-Second wireframe of the site
 
 ### Optimizations:
-Need to finish the final edits to each page
+Include input for additional subjects

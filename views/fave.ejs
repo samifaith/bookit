@@ -15,18 +15,18 @@
       <section id="logo">
         <a href="/"><img src="images/booksWhiote.png" alt="BookIt! Logo"></a>
       </section>
+      <h1>Favorite Books</h1>
       <section id="dropdown">
         <div class="">
           <a href="/profile"><input type="button" name="" value="PROFILE"></a>
-          <a href="/fave"><input type="button" name="" value="FAVORITES"></a>
         </div>
       </section>
     </header>
     <ul id="hero">
       <% for (let i = 0; i < favorites.length; i++) { %>
-        <li>
+        <li id="eachBook">
           <img src="<%= favorites[i].bookImg %>" alt="">
-          <span> <%= favorites[i].bookTitle %></span>
+          <span><%= favorites[i].bookTitle %></span>
 					<span><%=favorites[i].bookAuthor %></span>
           <span class="hide"><%=favorites[i]._id %></span>
           <span><i class="fa fa-trash" aria-hidden="true"></i></span>
