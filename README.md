@@ -5,7 +5,6 @@ I built an application called BookIt which gives readers just what they need for
 
 
 ![Image of BookIt!](bookit-home.png)
-![Image of BookIt!](interests.png)
 ![Image of BookIt!](profile.png)
 ![Image of BookIt!](favorite.png)
 ![Image of BookIt!](bookpage.png)
@@ -13,10 +12,9 @@ I built an application called BookIt which gives readers just what they need for
 
 **Pages in Order:**
 1. index.ejs
-2. interest.ejs
-3. profile.ejs
-4. favorite.ejs
-5. bookpage.png
+2. profile.ejs
+3. favorite.ejs
+4. bookpage.ejs
 
 
 **API's:**
