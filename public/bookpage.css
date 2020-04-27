@@ -199,6 +199,14 @@ p{
 span {
   font-size: .9vw;
 }
+.description {
+  display: -webkit-box;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  -webkit-line-clamp: 7;
+  -webkit-box-orient: vertical;
+
+}
 /******************************************
 /* ADDITIONAL STYLES
 /*******************************************/
