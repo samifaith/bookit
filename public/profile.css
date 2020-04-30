@@ -2,24 +2,17 @@
 /* BASE STYLES
 /*******************************************/
 
+html{
+  background: linear-gradient(360deg, rgba(25,13,41,1) 39%, rgba(33,14,59,1) 80%, rgba(38,27,99,1) 100%);
+
+}
 * {
   box-sizing: border-box;
 }
 body {
-  background: linear-gradient(360deg, rgba(25,13,41,1) 39%, rgba(33,14,59,1) 80%, rgba(38,27,99,1) 100%);
   color: rgba(255, 255, 255);
 }
-@keyframes stretch {
-  from {
-		opacity: 0;
-		transform: translate(0, -64px) scale(0);
-	}
 
-	to {
-		opacity: 1;
-		transform: translate(0, -64px) scale(1);
-	}
-}
 /******************************************
 /* LAYOUT
 /*******************************************/
@@ -97,10 +90,7 @@ h2{
 /******************************************
 /* HERO
 /*******************************************/
-.hero {
-  width: 100%;
-  height: 90vh;
-}
+
 .mainSec {
   display: flex;
 }

@@ -1,4 +1,4 @@
-let trash = document.getElementsByClassName("fa fa-trash")
+let trash = document.getElementsByClassName("fa fa-times-circle")
 
 Array.from(trash).forEach(function(element) {
   element.addEventListener('click', function(){
