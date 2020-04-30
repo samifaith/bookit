@@ -2,15 +2,15 @@
 fetch('/genreStats')
   .then((res) => res.json()) // parse response as JSON (can be res.text() for plain response)
   .then(async (response) => {
-    let sortedCategories = Object.keys(response).sort(function(a,b){return response[a]-response[b]}).reverse()
-    let startIndex = 0
 
+    let sortedCategories = Object.keys(response).sort(function(a,b){return response[a]-response[b]}).reverse()
 
     for(let i = 0; i < sortedCategories.length; i++){
       let res = await fetch(
-        `https://www.googleapis.com/books/v1/volumes?q=subject:${sortedCategories[i]}&filter=ebooks&orderBy=relevance&printType=books&startIndex=${startIndex}&maxResults=2`
+        `https://www.googleapis.com/books/v1/volumes?q=subject:${sortedCategories[i]}&filter=ebooks&orderBy=relevance&printType=books&startIndex=0&maxResults=2`
       )
       let response = await res.json()
+      console.log(response)
       let sectionTemplate = document.getElementById('sectionTemplate').innerHTML
       let newSection = document.createElement('div')
 
@@ -51,7 +51,7 @@ fetch('/genreStats')
         })
       })
 
-  
+
       document.getElementsByClassName('hero')[0].appendChild(newSection)
 
 
@@ -62,7 +62,7 @@ fetch('/genreStats')
 let genreDescriptions = {
   romance: "According to the Romance Writers of America, 'Two basic elements comprise every romance novel: a central love story and an emotionally-satisfying and optimistic ending.'",
   fiction: "Fiction is the telling of stories which are not real. More specifically, fiction is an imaginative form of narrative, one of the four basic rhetorical modes.",
-  nonfiction: "Nonfiction is an account or representation of a subject which is presented as fact. This presentation may be accurate or not; that is, it can give either a true or a false account of the subject in question.",
+  nonFiction: "Nonfiction is an account or representation of a subject which is presented as fact. This presentation may be accurate or not; that is, it can give either a true or a false account of the subject in question.",
   thriller: "Thrillers are characterized by fast pacing, frequent action, and resourceful heroes who must thwart the plans of more-powerful and better-equipped villains. ",
   juvenile: "Young-adult fiction, whether in the form of novels or short stories, has distinct attributes that distinguish it from the other age categories of fiction.",
   mystery: "Mystery fiction is a loosely-defined term that is often used as a synonym of detective fiction — in other words a novel or short story in which a detective (either professional or amateur) solves a crime.",
