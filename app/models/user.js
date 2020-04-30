@@ -24,7 +24,7 @@ var userSchema = mongoose.Schema({
       scienceFiction   : Boolean,
       thriller         : Boolean,
       juvenile         : Boolean,
-      nonFiction      : Boolean,
+      nonFiction       : Boolean,
       fiction          : Boolean,
       selfHelp         : Boolean
     },
