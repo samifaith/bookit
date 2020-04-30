@@ -175,20 +175,7 @@ li i {
   height: 50vh;
   width: 100%;
 }
-/* .messages ol {
-  justify-content: flex-start;
-  flex-wrap: wrap;
-}
-.messages li {
-  font-family: "Lato";
-  font-size: 1.2rem;
-  margin: 5px;
-  border: 1px solid #D1A1EE;
-  background: rgb(209, 161, 238, .1);
-  list-style: none;
-  padding: 5px 20px;
-  width: 25%;
-} */
+
 
 #nextButton {
   background: rgba(65, 0, 244);

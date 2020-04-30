@@ -4,13 +4,6 @@ const fetch = require("node-fetch");
 module.exports = function (app, passport, db, multer, ObjectId) {
   let goodreadsAPI = "pkPx0CaPv5dLSjiSVwWexA";
 
-  // let cleanTopics = topics.map((topic) => {
-  //   return cleanTopic(topic)
-  // })
-  //
-  // function cleanTopic(topic){
-  //   return topic.toLowerCase().replace("-", "")
-  // }
 
   // normal routes ===============================================================
 
@@ -21,28 +14,6 @@ module.exports = function (app, passport, db, multer, ObjectId) {
 
   // PROFILE SECTION =========================
 
-  // app.get('/profile/:genre', isLoggedIn, function(req, res){
-  //   db.collection('users').find({'local.email': req.user.local.email}).toArray((err, result) => {
-  //     if (err) return console.log(err)
-  //     console.log(result.genres)
-  //     res.render('interests.ejs', {
-  //       genres: result[0].genres
-  //     })
-  //   })
-  // })
-
-  // app.get('/profile', isLoggedIn, function(req, res) {
-  //   db.collection('demoday').find().toArray(async (err, result) => {
-  //     if (err) return console.log(err)
-  //     let gResult = await getBooks()
-  //     console.log(gResult)
-  //     res.render('profile.ejs', {
-  //       user : req.user,
-  //       demoday : result,
-  //       goodreads : gResult.GoodreadsResponse.search.results.work
-  //     })
-  //   })
-  // });
 
   app.get("/profile", isLoggedIn, function (req, res) {
     db.collection("users").find({ "local.email": req.user.local.email })
@@ -127,29 +98,7 @@ module.exports = function (app, passport, db, multer, ObjectId) {
       })
     })
 
-  // app.post('/messages', (req, res) => {
-  //   db.collection('demoday').save({name: req.body.name, msg: req.body.msg, thumbUp: 0, thumbDown:0}, (err, result) => {
-  //     if (err) return console.log(err)
-  //     console.log('saved to database')
-  //     res.redirect('/profile')
-  //   })
-  // })
 
-  // app.put('/messagesDown', (req, res) => {
-  //   db.collection('demoday')
-  //     .findOneAndUpdate({name: req.body.name, msg: req.body.msg}, {
-  //       $set: {
-  //         thumbUp:req.body.thumbUp - 1
-  //       }
-  //     }, {
-  //       sort: {_id: -1},
-  //       upsert: true
-  //     }, (err, result) => {
-  //       if (err) return res.send(err)
-  //       res.send(result)
-  //     })
-  //   })
-  //
 
   // =============================================================================
   // AUTHENTICATE (FIRST LOGIN) ==================================================
@@ -234,33 +183,6 @@ module.exports = function (app, passport, db, multer, ObjectId) {
       });
   });
 
-  // app.put('/interests',isLoggedIn, (req, res) => {
-  //   db.collection('users').findOneAndUpdate({_id: req.user._id}
-  //     ,{
-  //     $set: {
-  //       genres: req.body.genres
-  //     }
-  //   }, {
-  //       upsert: false,
-  //       new: true
-  //   }, (err, result) => {
-  //     if (err) return res.send(err)
-  //     res.send(200)
-  //   })
-  // })
-
-  // app.delete('/interests', (req, res) => {
-  //   db.collection('demoday').findOneAndDelete({
-  //     genre: req.body.genre
-  //   }, (err, result) => {
-  //     if (err) return res.send(500, err)
-  //     res.send('Message deleted!')
-  //   })
-  // })
-
-  // app.get('/interests', function(req, res) {
-  //     res.render('interests.ejs', { message: req.flash('signupMessage') });
-  // });
 
   // =============================================================================
   // UNLINK ACCOUNTS =============================================================
