@@ -42,7 +42,6 @@ form {
     display: block;
     margin-top: 0em;
     font-size: 1.5vw;
-
 }
 
 .form-group {
@@ -73,8 +72,6 @@ label {
     margin-bottom: 5px;
     font-weight: bold;
 }
-
-
 
 button  {
   background: rgb(121, 90, 140, .2);
