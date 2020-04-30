@@ -10,7 +10,7 @@
 }
 
 /* Clear fix hack */
-.clearfix:after {
+/* .clearfix:after {
      content: ".";
      display: block;
      clear: both;
@@ -21,17 +21,17 @@
 
 .clear {
 	clear: both;
-}
+} */
 
-.alignright {
+/* .alignright {
 	float: right;
-	padding: 0 0 10px 10px; /* note the padding around a right floated image */
+	padding: 0 0 10px 10px;
 }
 
 .alignleft {
 	float: left;
-	padding: 0 10px 10px 0; /* note the padding around a left floated image */
-}
+	padding: 0 10px 10px 0;
+} */
 
 /******************************************
 /* BASE STYLES
@@ -74,21 +74,27 @@ h1 {
 }
 
 h1 img{
-  max-width: 18%;
-  margin-left: 83px;
+  max-width: 15%;
+  margin: 83px;
 }
 
 #loginIcon {
   display: flex;
-  flex-flow: column;
   justify-content: center;
   align-items: center;
   color: white;
   font-size: .7rem;
+  border-radius: 30px;
+  background: rgb(121, 90, 140, .2);
+  color: #fff;
+  padding: 10px 30px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, .2);
+  border: none;
 }
 
 #loginIcon p {
-  margin-bottom: 0;
+  margin: 0;
+  margin-left: 10px;
   font-family: "Lato";
   font-size: .9rem;
 }
@@ -135,7 +141,7 @@ input {
   margin-left: 50px;
 }
 #discoverMemo {
-  font-size: 7rem;
+  font-size: 7vw;
   font-family: "Playfair Display";
   text-align: left;
   margin: 0;
@@ -143,7 +149,7 @@ input {
   line-height: 125px;
 }
 #curatedMemo {
-  font-size: 2rem;
+  font-size: 2vw;
   font-family: "Lato";
   line-height: 47px;
   text-align: left;
@@ -154,16 +160,21 @@ input {
   width: 80%;
   font-family: "Lato";
   font-size: 1.5rem;
-  border-radius: 15px;
-  background: #D1A1EE;
+  border-radius: 30px;
+  background: rgb(121, 90, 140, .2);
   color: #fff;
   padding: 7px;
   margin-bottom: 20px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, .2);
+  border: none;
+}
+
+
+#leftPanel button:hover, #loginIcon:hover {
+  background-color:rgb(209, 160, 238)
 }
 button i {
   margin-right: 20px;
-
 }
 button i:hover {
 	box-shadow: 0 8px 16px rgba(0, 0, 0, .4);

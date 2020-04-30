@@ -13,28 +13,24 @@
   <body>
 
   <!-- SIGNUP FORM -->
-  <% if (message.length > 0) { %>
-      <div class="alert alert-danger"><%= message %></div>
-  <% } %>
+
 
   <section id="leftPanel">
-    <h1><img src="images/booksPurple.png" alt="BookIt! Logo"></h1>
+    <a href="/"><h1><img src="images/booksWhiote.png" alt="BookIt! Logo"></h1></a>
     <p><span>Oh!</span></p>
     <p><strong>The Places You'll Go</strong></p>
     <img id="audioGirl" src="images/audiogirl.png" alt="Audio Girl">
   </section>
   <section id="rightPanel">
-
-      <header>
-        <ol>
-          <li id="accountStep"><strong>ACCOUNT</strong></li>
-          <li><img src="images/purpleplane.png" alt="planes"></li>
-          <li id="interestStep">INTERESTS</li>
-        </ol>
-      </header>
+    <header>
+      <h2 id="accountStep"><strong>Create An Account</strong></h2>
+    </header>
     <div class="container">
       <form action="/signup" method="post">
         <p>Create an account to discover your next great read.</p>
+        <% if (message.length > 0) { %>
+            <div class="alert alert-danger"><%= message %></div>
+        <% } %>
         <label for="firstName">First Name</label>
         <input type="text" id="firstName" name="firstName" value="">
         <label for="lastName">Last Name</label>
