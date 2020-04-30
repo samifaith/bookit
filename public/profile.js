@@ -3,9 +3,12 @@ fetch('/genreStats')
   .then((res) => res.json()) // parse response as JSON (can be res.text() for plain response)
   .then(async (response) => {
     let sortedCategories = Object.keys(response).sort(function(a,b){return response[a]-response[b]}).reverse()
+    let startIndex = 0
+
+
     for(let i = 0; i < sortedCategories.length; i++){
       let res = await fetch(
-        `https://www.googleapis.com/books/v1/volumes?q=subject:${sortedCategories[i]}&filter=ebooks&orderBy=relevance&printType=books&startIndex=0&maxResults=2`
+        `https://www.googleapis.com/books/v1/volumes?q=subject:${sortedCategories[i]}&filter=ebooks&orderBy=relevance&printType=books&startIndex=${startIndex}&maxResults=2`
       )
       let response = await res.json()
       let sectionTemplate = document.getElementById('sectionTemplate').innerHTML
@@ -47,6 +50,8 @@ fetch('/genreStats')
           })
         })
       })
+
+  
       document.getElementsByClassName('hero')[0].appendChild(newSection)
 
 

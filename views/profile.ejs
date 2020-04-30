@@ -1,68 +1,68 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
 
-<head>
-  <meta charset="utf-8">
-  <meta name="description" content="Your description goes here">
-  <meta name="keywords" content="playlist, books, curated">
-  <title>Made For You</title>
-  <link rel="stylesheet" href="normalize.css">
-  <link rel="stylesheet" href="profile.css">
-  <link rel="stylesheet" href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css">
-  <link href="https://fonts.googleapis.com/css?family=Lato:500,600,700,700i|Playfair+Display:500,600,700,700i|Playfair+Display+SC:500,600,700,700i&display=swap" rel="stylesheet">
-</head>
+  <head>
+    <meta charset="utf-8">
+    <meta name="description" content="Platform for Lovers of Literature. Discover Your Next Adventure.">
+    <meta name="keywords" content="playlist, books, curated">
+    <title>Made For You</title>
+    <link rel="stylesheet" href="normalize.css">
+    <link rel="stylesheet" href="profile.css">
+    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Lato:500,600,700,700i|Playfair+Display:500,600,700,700i|Playfair+Display+SC:500,600,700,700i&display=swap" rel="stylesheet">
+  </head>
 
-<body>
-  <header>
-    <section id="logo">
-      <a href="/"><img src="images/booksWhiote.png" alt="BookIt! Logo"></a>
-    </section>
-    <section id="dropdown">
-      <div class="">
-        <h1>Made For You: Books</h1>
-        <a href="/fave"><input type="button" name="" value="FAVORITES"></a>
-      </div>
-    </section>
-  </header>
-  <h2>The Genres You Can't Get Enough Of</h2>
-  <div class="hero">
-  </div>
-    <script type="text/javascript" src="profile.js"></script>
-    <script id="sectionTemplate" type="text/html">
-      <section class="mainSec" id="genre1">
-        <div class="topicDiv">
-          <section class="topic">
-            <h3 class="favGenreHeader"><%= favGenres[0] %></h3>
-            <input class="topic1" type="hidden" value="<%= favGenres[0] %>">
-            <p class="genreOverview1"></p>
-          </section>
-        </div>
-        <div class="recommendDiv">
-          <section class="recommend">
-            <a href="#"><img data-category='<%= favGenres[0] %>' src="" alt="book" class="genreCount imgBook1"></a>
-            <div class="bookInfo">
-              <p class="title title1"></p>
-              <p class="author author1"></p>
-            </div>
-          </section>
-          <section class="recommend">
-            <a href="#"><img data-category='<%= favGenres[0] %>' src="" alt="book" class="genreCount imgBook2"></a>
-            <div class="bookInfo">
-              <p class="title title2"></p>
-              <p class="author author2"></p>
-            </div>
-          </section>
-        </div>
-        <div class="circleDiv">
-          <section class="circle">
-            <p></p>
-          </section>
+  <body>
+    <header>
+      <section id="logo">
+        <a href="/"><img src="images/booksWhiote.png" alt="BookIt! Logo"></a>
+      </section>
+      <section id="dropdown">
+        <div class="">
+          <h1>Made For You: Books</h1>
+          <a href="/fave"><input type="button" name="" value="FAVORITES"></a>
         </div>
       </section>
-
-    </script>
-    <!-- <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/xml-js@1.6.11/lib/index.min.js"></script> -->
-  </div>
-</body>
+    </header>
+    <h2>The Genres You Can't Get Enough Of</h2>
+    <div class="hero">
+    </div>
+      <script type="text/javascript" src="profile.js"></script>
+      <script id="sectionTemplate" type="text/html">
+        <section class="mainSec" id="genre1">
+          <div class="topicDiv">
+            <section class="topic">
+              <h3 class="favGenreHeader"><%= favGenres[0] %></h3>
+              <input class="topic1" type="hidden" value="<%= favGenres[0] %>">
+              <p class="genreOverview1"></p>
+            </section>
+          </div>
+          <div class="recommendDiv">
+            <!-- <button type="button" class="pagination prev">◀</button> -->
+            <section class="recommend">
+              <a href="#"><img data-category='<%= favGenres[0] %>' src="" alt="book" class="genreCount imgBook1"></a>
+              <div class="bookInfo">
+                <p class="title title1"></p>
+                <p class="author author1"></p>
+              </div>
+            </section>
+            <section class="recommend">
+              <a href="#"><img data-category='<%= favGenres[0] %>' src="" alt="book" class="genreCount imgBook2"></a>
+              <div class="bookInfo">
+                <p class="title title2"></p>
+                <p class="author author2"></p>
+              </div>
+            </section>
+            <!-- <button type="button" class="pagination next">▶</button> -->
+          </div>
+          <div class="circleDiv">
+            <section class="circle">
+              <p></p>
+            </section>
+          </div>
+        </section>
+      </script>
+    </div>
+  </body>
 
 </html>

@@ -103,7 +103,7 @@ header{
   color: lightgrey;
 }
 
-#dropdown input:hover, .fave:hover{
+#dropdown input:hover, .button:hover{
   background-color:rgb(209, 160, 238)
 }
 /******************************************
@@ -118,29 +118,23 @@ header{
   padding-left: 20px;
   justify-content: space-evenly;
 }
-.top {
+/* .top {
   display: flex;
   width: 50vw;
   justify-content: flex-start;
   align-items: flex-start;
-}
+} */
 /******************************************
 /* LEFT PANEL
 /*******************************************/
-#rightPanel{
+.top{
   display: flex;
   flex: 1;
-  padding: 50px;
+  padding: 10px 25px;
   justify-content: center;
   align-items: center;
 }
-#book{
-  height: 20vh;
-  background: white;
-  border-radius: 20px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, .2);
-}
-#book img{
+#bookImage{
   border-radius: 20px;
   box-shadow: 1px 1px 16px -2px rgba(0, 0, 0, 0.5);
 }
@@ -148,11 +142,12 @@ header{
 /******************************************
 /* RIGHT PANEL
 /*******************************************/
-#leftPanel{
+#rightPanel{
   display: flex;
   flex-flow: column;
+  align-items: center;
+  margin: 5vh;
   color: white;
-  flex: 1;
 }
 h2{
   font-size: 2.4rem;
@@ -162,35 +157,29 @@ h3{
   line-height: 0;
   margin-top: 0;
 }
-p{
-  font-size: 1.2rem;
-}
-.largeText{
-  overflow: scroll;
-}
-.fave {
+.button {
   font-size: 1vh;
   display: flex;
   justify-content: center;
   align-items: center;
   border-radius: 30px;
-  width: 10vw;
+  width: 13vw;
+  color: white;
   background: rgb(121, 90, 140, .2);
   box-shadow: 0 4px 8px rgba(0, 0, 0, .2);
   transition: all .2s;
-  animation: zoomin .5s;
-  margin: 10px 0;
+  margin: 10px 10px 10px 0;
+  font-size: 1.2rem;
+  border: 0px;
 }
-.fave img {
-  max-width: 2.5vw;
-  height: 2.5vh;
-  margin-right: 5px;
+.button a {
+  text-decoration: none;
 }
-.fave p {
+.button input {
   font-size: .9vw;
   color: rgb(255, 255, 255, .90);
 }
-.fave:hover {
+.button:hover {
   background-color:rgb(209, 160, 238)
 }
 .bottom {
@@ -201,12 +190,22 @@ span {
 }
 .description {
   display: -webkit-box;
-  overflow: hidden;
+  overflow: scroll;
   text-overflow: ellipsis;
   -webkit-line-clamp: 7;
   -webkit-box-orient: vertical;
 
 }
+
+p{
+  font-size: 1.7vw;
+}
 /******************************************
 /* ADDITIONAL STYLES
 /*******************************************/
+.bottom{
+  margin: 0 100px;
+}
+.buttons{
+  display: flex;
+}
