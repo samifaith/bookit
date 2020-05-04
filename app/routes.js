@@ -32,6 +32,7 @@ module.exports = function (app, passport, db, multer, ObjectId) {
     req.logout();
     res.redirect("/");
   });
+
   // GENRE COUNT INCREASE ===============================================================
   app.get('/genreStats', (req, res) => {
       db.collection('users')
@@ -62,6 +63,7 @@ module.exports = function (app, passport, db, multer, ObjectId) {
       })
     })
 
+    // SAVE FAVORITE BOOKS ===============================================================
 
     app.post('/fave', (req, res) => {
       let uId = ObjectId(req.session.passport.user)
@@ -87,6 +89,9 @@ module.exports = function (app, passport, db, multer, ObjectId) {
           })
         })
     });
+
+
+    // REMOVE FAVE BOOK ===============================================================
 
     app.delete('/faveDelete', (req, res) => {
       let postId = ObjectId(req.body.postId)
