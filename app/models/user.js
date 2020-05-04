@@ -21,10 +21,10 @@ var userSchema = mongoose.Schema({
       romance          : Boolean,
       mystery          : Boolean,
       fantasy          : Boolean,
-      scienceFiction   : Boolean,
+      sciencefiction   : Boolean,
       thriller         : Boolean,
       juvenile         : Boolean,
-      nonFiction       : Boolean,
+      nonfiction       : Boolean,
       fiction          : Boolean,
       selfHelp         : Boolean
     },
@@ -32,12 +32,12 @@ var userSchema = mongoose.Schema({
       romance          : Number,
       mystery          : Number,
       fantasy          : Number,
-      scienceFiction   : Number,
+      sciencefiction   : Number,
       thriller         : Number,
       juvenile         : Number,
-      nonFiction       : Number,
+      nonfiction       : Number,
       fiction          : Number,
-      selfHelp         : Number
+      selfhelp         : Number
     },
     favGenres          : Array
 
