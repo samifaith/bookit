@@ -77,10 +77,10 @@ module.exports = function(passport) {
                   romance : false,
                   mystery : false,
                   fantasy : false,
-                  scienceFiction : false,
+                  sciencefiction : false,
                   thriller  : false,
                   juvenile : false,
-                  nonFiction : false,
+                  nonfiction : false,
                   fiction : false,
                   selfhelp : false
                 };
@@ -88,10 +88,10 @@ module.exports = function(passport) {
                   romance : 0,
                   mystery : 0,
                   fantasy : 0,
-                  scienceFiction : 0,
+                  sciencefiction : 0,
                   thriller  : 0,
                   juvenile : 0,
-                  nonFiction : 0,
+                  nonfiction : 0,
                   fiction : 0,
                   selfhelp : 0
                 }
