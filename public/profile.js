@@ -2,12 +2,12 @@
 fetch('/genreStats')
   .then((res) => res.json()) // parse response as JSON (can be res.text() for plain response)
   .then(async (response) => {
-
+    console.log(response)
     let sortedCategories = Object.keys(response).sort(function(a,b){return response[a]-response[b]}).reverse()
-
+    console.log(sortedCategories)
     for(let i = 0; i < sortedCategories.length; i++){
       let res = await fetch(
-        `https://www.googleapis.com/books/v1/volumes?q=subject:${sortedCategories[i]}&filter=ebooks&orderBy=relevance&printType=books&startIndex=0&maxResults=2`
+        `https://www.googleapis.com/books/v1/volumes?q=subject:${sortedCategories[i]}&filter=ebooks&orderBy=relevance&printType=books&startIndex=0&langRestrict="en"&maxResults=2`
       )
       let response = await res.json()
       console.log(response)
@@ -66,6 +66,6 @@ let genreDescriptions = {
   thriller: "Thrillers are characterized by fast pacing, frequent action, and resourceful heroes who must thwart the plans of more-powerful and better-equipped villains. ",
   juvenile: "Young-adult fiction, whether in the form of novels or short stories, has distinct attributes that distinguish it from the other age categories of fiction.",
   mystery: "Mystery fiction is a loosely-defined term that is often used as a synonym of detective fiction — in other words a novel or short story in which a detective (either professional or amateur) solves a crime.",
-  sciencefiction: "Science fiction (abbreviated SF or sci-fi with varying punctuation and capitalization) is a broad genre of fiction that often involves speculations based on current or future science or technology."
-
+  'science-fiction': "Science fiction (abbreviated SF or sci-fi with varying punctuation and capitalization) is a broad genre of fiction that often involves speculations based on current or future science or technology.",
+  fantasy: "Fantasy is a genre that uses magic and other supernatural forms as a primary element of plot, theme, and/or setting."
 }
